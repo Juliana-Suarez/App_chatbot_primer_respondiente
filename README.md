@@ -93,7 +93,6 @@ cd tu-repositorio-rag
 ```
 
 2. Configurar el Entorno Virtual (Python 3)  
-
 En entornos Windows (PowerShell/CMD):
 ```bash
 python -m venv venv
@@ -102,14 +101,12 @@ venv\Scripts\activate
 
 
 3. Instalar dependencias requeridas  
-
 Ejecuta el gestor de paquetes para instalar todas las librerías necesarias definidas en las configuraciones del código fuente:
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Configurar Variables de Entorno y Llaves API  
-
 Crea un archivo de texto plano en la raíz del proyecto llamado .env e introduce tus respectivos tokens privados de conexión remota:
 ```bash
 HUGGINGFACEHUB_API_TOKEN=tu_token_de_huggingface_aqui
