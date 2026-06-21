@@ -128,7 +128,7 @@ Una vez que la base vectorial contenga los datos indexados, arranca el servidor 
 python app.py
 ```
 
-El servidor iniciará en modo local. Abre tu navegador web e ingresa a la siguiente URL para interactuar con la interfaz gráfica de Médix:
+6. El servidor iniciará en modo local. Abre tu navegador web e ingresa a la siguiente URL para interactuar con la interfaz gráfica de Médix:
 http://127.0.0.1:5000
 =======
 # App_chatbot_primer_respondiente
