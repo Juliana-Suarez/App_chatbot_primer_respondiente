@@ -92,7 +92,8 @@ git clone [https://github.com/tu-usuario/tu-repositorio-rag.git](https://github.
 cd tu-repositorio-rag
 ```
 
-2. Configurar el Entorno Virtual (Python 3)
+2. Configurar el Entorno Virtual (Python 3)  
+
 En entornos Windows (PowerShell/CMD):
 ```bash
 python -m venv venv
@@ -100,20 +101,23 @@ venv\Scripts\activate
 ```
 
 
-3. Instalar dependencias requeridas
+3. Instalar dependencias requeridas  
+
 Ejecuta el gestor de paquetes para instalar todas las librerías necesarias definidas en las configuraciones del código fuente:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Configurar Variables de Entorno y Llaves API
+4. Configurar Variables de Entorno y Llaves API  
+
 Crea un archivo de texto plano en la raíz del proyecto llamado .env e introduce tus respectivos tokens privados de conexión remota:
 ```bash
 HUGGINGFACEHUB_API_TOKEN=tu_token_de_huggingface_aqui
 GROQ_API_KEY=gsk_tu_api_key_de_groq_aqui
 ```
 
-5. Orden Obligatorio de Ejecución del Sistema
+5. Orden Obligatorio de Ejecución del Sistema  
+
 a. Construcción de la Base de Datos Vectorial (Poblamiento inicial)
 Para leer el documento PDF, segmentarlo en fragmentos reducidos, generar los embeddings y guardarlos localmente, ejecuta el script principal:
 ```bash
@@ -122,7 +126,8 @@ python main.py
 
 Espera a ver el mensaje de confirmación: 🎉 ¡Base de datos vectorial construida con éxito!. Verás que se habrá generado automáticamente la carpeta persistente local llamada chromadb/.
 
-b. Inicialización de la Aplicación Web (Flask)
+b. Inicialización de la Aplicación Web (Flask)  
+
 Una vez que la base vectorial contenga los datos indexados, arranca el servidor web que expone la API de interacción para el modelo de lenguaje Groq:
 ```bash
 python app.py
@@ -130,6 +135,7 @@ python app.py
 
 6. El servidor iniciará en modo local. Abre tu navegador web e ingresa a la siguiente URL para interactuar con la interfaz gráfica de Médix:
 http://127.0.0.1:5000
+
 =======
 # App_chatbot_primer_respondiente
 >>>>>>> 89a77fbd82f72c045ae04657528b9db5b1dfb883
