@@ -14,16 +14,16 @@ Aplicación web interactiva basada en el patrón RAG (Retrieval-Augmented Genera
 ##  Documento Seleccionado y Justificación
 
 * **Documento:** *Manual del Primer Respondiente (4ª Edición)* - Secretaría Distrital de Salud de Bogotá, D.C. / Centro Regulador de Urgencias (CRU).
-* **Justificación:** En situaciones de emergencia médica, accidentes de tránsito o incidentes domésticos, el tiempo y la exactitud de los primeros auxilios son fundamentales para mitigar riesgos de invalidez o muerte. Este documento oficial fue seleccionado porque estandariza los protocolos técnicos y de seguridad ciudadana aplicados bajo el ordenamiento legal colombiano. Implementar un sistema RAG sobre este manual garantiza que el asistente virtual formule respuestas estrictamente validadas por el sistema de emergencias de salud pública, eliminando alucinaciones críticas en procedimientos de soporte vital básico.
-
+* **Justificación:** En situaciones de emergencia médica, accidentes de tránsito o incidentes domésticos, el tiempo y la exactitud de los primeros auxilios son fundamentales para mitigar riesgos de invalidez o muerte. Este documento oficial fue seleccionado porque estandariza los protocolos técnicos y de seguridad ciudadana aplicados bajo el ordenamiento legal colombiano. Implementar un sistema RAG sobre este manual garantiza que el asistente virtual formule respuestas estrictamente validadas por el sistema de emergencias de salud pública, eliminando posibles alucinaciones.
 ---
 
 ## Persona Usuaria Objetivo y Caso de Uso
 
-* **Persona Usuaria Objetivo:** Ciudadanos comunes (taxistas, amas de casa, estudiantes, profesores), brigadistas de emergencias en entornos empresariales, personal de apoyo institucional (Defensa Civil, Cruz Roja) o cualquier persona que presencie un incidente.
-* **Caso de Uso:** El sistema está diseñado para ser utilizado en situaciones de urgencia, entornos laborales de alta responsabilidad o escenarios de capacitación donde se requiera acceso inmediato y confiable a protocolos de soporte vital básico. Los principales escenarios de uso incluyen:
+* **Persona Usuaria Objetivo:** Ciudadanos comunes (taxistas, amas de casa, estudiantes, profesores), brigadistas de emergencias en entornos empresariales, personal de apoyo institucional (Defensa Civil, Cruz Roja) o cualquier persona que presencie un incidente como primer respondiente.
+* **Caso de Uso:** El sistema está diseñado para ser utilizado en situaciones de urgencia, entornos laborales de alta responsabilidad o escenarios de capacitación donde se requiera acceso inmediato y confiable a protocolos. 
+Los principales escenarios de uso incluyen:
   
-  1. **Atención de Emergencias en Tiempo Real:** Situaciones críticas en el hogar, la vía pública o empresas (como paros cardiorrespiratorios, atragantamientos, quemaduras, fracturas o intoxicaciones) donde un primer respondiente bajo condiciones de estrés necesita recordar inmediatamente las maniobras correctas, qué acciones evitar para no empeorar al paciente y cómo activar el Sistema de Emergencias Médicas (SEM).
+  1. **Atención de Emergencias en Tiempo Real:** Situaciones críticas en el hogar, la vía pública o empresas (como paros cardiorrespiratorios, atragantamientos, quemaduras, fracturas o intoxicaciones) donde un primer respondiente bajo condiciones de estrés necesita recordar inmediatamente la primera respuesta a incidentes o emergencias, qué acciones evitar para no empeorar la situacion o afectados y cómo activar el Sistema de Emergencias Médicas (SEM).
   2. **Gestión de Seguridad y Salud en el Trabajo (SST):** Brigadistas de emergencia y personal de salud ocupacional en entornos corporativos o industriales que requieren verificar de forma rápida y estandarizada si sus botiquines, procedimientos de inmovilización o planes de contingencia se alinean con la normativa oficial vigente del manual.
   3. **Capacitación y Consulta Educativa:** Estudiantes de primeros auxilios, conductores de servicio público o ciudadanos interesados en la gestión del riesgo que desean validar sus conocimientos, resolver dudas puntuales en lenguaje natural o repasar técnicas específicas de atención prehospitalaria sin necesidad de hojear manualmente la totalidad del documento técnico.
 
