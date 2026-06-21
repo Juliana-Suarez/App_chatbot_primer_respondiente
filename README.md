@@ -118,7 +118,7 @@ GROQ_API_KEY=gsk_tu_api_key_de_groq_aqui
 
 5. Orden Obligatorio de Ejecución del Sistema  
 
-a. Construcción de la Base de Datos Vectorial (Poblamiento inicial)
+a. Construcción de la Base de Datos Vectorial (Poblamiento inicial)  
 Para leer el documento PDF, segmentarlo en fragmentos reducidos, generar los embeddings y guardarlos localmente, ejecuta el script principal:
 ```bash
 python main.py
@@ -127,7 +127,6 @@ python main.py
 Espera a ver el mensaje de confirmación: 🎉 ¡Base de datos vectorial construida con éxito!. Verás que se habrá generado automáticamente la carpeta persistente local llamada chromadb/.
 
 b. Inicialización de la Aplicación Web (Flask)  
-
 Una vez que la base vectorial contenga los datos indexados, arranca el servidor web que expone la API de interacción para el modelo de lenguaje Groq:
 ```bash
 python app.py
