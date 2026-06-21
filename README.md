@@ -90,7 +90,7 @@ Sigue secuencialmente estos pasos para implementar el entorno virtual local y le
 ```bash
 git clone [https://github.com/tu-usuario/tu-repositorio-rag.git](https://github.com/tu-usuario/tu-repositorio-rag.git)
 cd tu-repositorio-rag
-```bash
+```
 
 2. Configurar el Entorno Virtual (Python 3)
 En entornos Windows (PowerShell/CMD):
