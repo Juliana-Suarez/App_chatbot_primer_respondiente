@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚑 Médix: Asistente Virtual para el Primer Respondiente (RAG)
 
 Aplicación web interactiva basada en el patrón RAG (Retrieval-Augmented Generation) para realizar consultas inteligentes sobre atención prehospitalaria y primeros auxilios, utilizando como base de conocimiento el manual oficial de la Secretaría Distrital de Salud de Bogotá.
@@ -91,3 +92,6 @@ python app.py
 
 El servidor iniciará en modo local. Abre tu navegador web e ingresa a la siguiente URL para interactuar con la interfaz gráfica de Médix:
 👉 http://127.0.0.1:5000
+=======
+# App_chatbot_primer_respondiente
+>>>>>>> 89a77fbd82f72c045ae04657528b9db5b1dfb883
