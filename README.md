@@ -119,7 +119,7 @@ b. Inicialización de la Aplicación Web (Flask)
 Una vez que la base vectorial contenga los datos indexados, arranca el servidor web que expone la API de interacción para el modelo de lenguaje Groq:
 ```bash
 python app.py
-
+```bash
 El servidor iniciará en modo local. Abre tu navegador web e ingresa a la siguiente URL para interactuar con la interfaz gráfica de Médix:
 http://127.0.0.1:5000
 =======
