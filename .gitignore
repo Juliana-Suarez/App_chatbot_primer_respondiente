@@ -1,0 +1,19 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Base de datos vectorial
+chromadb/
+
+# Variables de entorno y llaves
+.env
+
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

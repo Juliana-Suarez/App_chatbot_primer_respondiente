@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚑 Chatbot Primer Respondiente</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .chat-container { width: 100%; max-width: 600px; height: 80vh; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; overflow: hidden; }
+        .chat-header { background: #e74c3c; color: white; padding: 15px; text-align: center; }
+        .chat-header h2 { font-size: 1.4rem; }
+        .chat-header p { font-size: 0.85rem; opacity: 0.9; }
+        .chat-box { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; background: #fafafa; }
+        .message { max-width: 80%; padding: 12px 16px; border-radius: 15px; font-size: 0.95rem; line-height: 1.4; word-wrap: break-word; }
+        .message.assistant { background: #f1f0f0; color: #333; align-self: flex-start; border-top-left-radius: 2px; }
+        .message.user { background: #e74c3c; color: white; align-self: flex-end; border-top-right-radius: 2px; }
+        .chat-input-area { display: flex; padding: 15px; background: #fff; border-top: 1px solid #eee; gap: 10px; }
+        .chat-input-area input { flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 25px; outline: none; font-size: 0.95rem; }
+        .chat-input-area button { background: #e74c3c; color: white; border: none; padding: 0 20px; border-radius: 25px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+        .chat-input-area button:hover { background: #c0392b; }
+        .loading { font-style: italic; color: #777; align-self: flex-start; }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <h2>🚑 Primer Respondiente Chatbot</h2>
+        <p>Asistente virtual especializado - Médix</p>
+    </div>
+    
+    <div class="chat-box" id="chatBox">
+        <div class="message assistant">
+            ¡Hola! Soy Médix, tu asistente experto en primeros auxilios. ¿En qué situación o emergencia te puedo ayudar hoy?
+        </div>
+    </div>
+    
+    <div class="chat-input-area">
+        <input type="text" id="userInput" placeholder="Escribe tu pregunta sobre primeros auxilios aquí..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</div>
+
+<script>
+    const chatBox = document.getElementById('chatBox');
+    const userInput = document.getElementById('userInput');
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    }
+
+    async function sendMessage() {
+        const messageText = userInput.value.trim();
+        if (!messageText) return;
+
+        // 1. Añadir el mensaje del usuario a la pantalla
+        appendMessage(messageText, 'user');
+        userInput.value = '';
+
+        // 2. Añadir un indicador de carga temporal
+        const loadingId = 'loading-' + Date.now();
+        const loadingDiv = document.createElement('div');
+        loadingDiv.className = 'message assistant loading';
+        loadingDiv.id = loadingId;
+        loadingDiv.innerText = 'Médix está consultando el manual...';
+        chatBox.appendChild(loadingDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        // 3. Enviar la petición HTTP POST a Flask usando fetch
+        try {
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: messageText })
+            });
+            const data = await response.get_json ? await response.get_json() : await response.json();
+            
+            // Quitar indicador de carga
+            document.getElementById(loadingId).remove();
+
+            // 4. Añadir la respuesta del RAG formateando los saltos de línea (**📌 Citas)
+            let formattedResponse = data.response.replace(/\n/g, '<br>');
+            // Un reemplazo básico para convertir el formato Markdown **texto** en HTML bold
+            formattedResponse = formattedResponse.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            appendMessage(formattedResponse, 'assistant', true);
+
+        } catch (error) {
+            document.getElementById(loadingId).remove();
+            appendMessage('Lo siento, ocurrió un error al conectar con el servidor.', 'assistant');
+        }
+    }
+
+    function appendMessage(text, sender, isHTML = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}`;
+        if (isHTML) {
+            messageDiv.innerHTML = text;
+        } else {
+            messageDiv.innerText = text;
+        }
+        chatBox.appendChild(messageDiv);
+        chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll hacia abajo
+    }
+</script>
+
+</body>
+</html>
