@@ -34,46 +34,53 @@ Los principales escenarios de uso incluyen:
 A continuación se registran 5 interacciones reales del sistema procesadas por el LLM (`llama-3.1-8b-instant`) con la inyección de contexto y las citas bibliográficas estructuradas dinámicamente:
 
 ### Pregunta 1: ¿Qué es un ciclo de reanimación cardiorespiratoria (RCP) y cuántas compresiones se deben alcanzar por minuto?
-* **Respuesta del Sistema:** Un ciclo de reanimación cardiorespiratoria (RCP) consiste en 30 compresiones y 2 ventilaciones. Se recomienda realizar 5 ciclos en 2 minutos, lo que equivale a una frecuencia de 100 compresiones por minuto.
+* **Respuesta del Sistema:** Un ciclo de reanimación cardiorrespiratoria (RCP) consiste en 30 compresiones y 2 ventilaciones. Se debe intentar alcanzar una frecuencia de 100 compresiones por minuto.
   **Páginas consultadas del documento:** Pág. 4, Pág. 28
 
 ### Pregunta 2: ¿Qué se debe hacer y qué NO se debe hacer ante una quemadura por calor?
-* **Respuesta del Sistema:** Ante una quemadura por calor, se debe hacer lo siguiente:
+* **Respuesta del Sistema:**Ante una quemadura por calor, se deben hacer los siguientes pasos:
 
-- Lave con abundante agua limpia el área quemada por un tiempo no menor a 10 minutos.
-- Cubra la quemadura con una tela limpia.
+- Acérquese a la persona con precaución.
+- Identifíquese ofreciendo ayuda.
+- Asegúrese que usted o la persona no corren peligro adicional.
+- Active el sistema de emergencias médicas. Llame al 125/123.
+- Protéjase usted.
+- Retire a la persona de la fuente de calor lo más rápido posible.
+- Si las prendas de vestir están en llama, apague el fuego de la víctima. Esto se logra envolviéndola en una cobija o toalla.
+- Aplique agua fría (no helada) por 10 minutos, especialmente si las quemaduras son grandes.
+- Retire todas las prendas de vestir y las alhajas que no estén adheridas a la piel.
+- Cubra la lesión con una tela limpia.
 
 Y lo siguiente NO se debe hacer:
 
-- No le dé nada de tomar o de comer a la persona quemada: agua, gaseosa, aromática.
+- No le dé nada de tomar o de comer a la persona quemada (agua, gaseosa, aromática).
 - No le dé ningún medicamento.
 - No aplique nada en la quemadura (cremas, pomadas, aceites, etcétera).
-- Si la quemadura presenta ampollas, no las rompa.
 
-  **Páginas consultadas del documento:** Pág. 23
-
+  **Páginas consultadas del documento:** Pág. 12, Pág. 22, Pág. 23  
+  
 ### Pregunta 3: ¿Cuáles son las medidas para desobstruir la vía aérea en bebés (menores de 1 año) conscientes que muestran signos de atoramiento?
-* **Respuesta del Sistema:** Si el bebé muestra signos de atoramiento, debe abrir la boca y verificar si observa el cuerpo extraño y puede retirarlo con el dedo meñique. Si no ve el cuerpo extraño o el elemento que está produciendo la obstrucción de la vía aérea, debe voltear al niño boca abajo sosteniéndolo firmemente, y dar 5 golpes con el talón de la mano en la espalda, entre los omóplatos o paletas. Luego, debe voltearlo boca arriba y realizar 5 compresiones torácicas en el punto de cruce de la línea imaginaria entre tetillas y el esternón.
+* **Respuesta del Sistema:** Si el bebé muestra signos de atoramiento, abra la boca y verifique si observa el cuerpo extraño y puede retirarlo con el dedo meñique. No haga barridos a ciegas. Si no ve el cuerpo extraño o el elemento que está produciendo la obstrucción de la vía aérea, vuelva al niño boca abajo sosteniéndolo firmemente, y dé 5 golpes con el talón de la mano en la espalda, entre los omóplatos o paletas. Inmediatamente vuelva al niño boca arriba, realice 5 compresiones torácicas en el punto de cruce de la línea imaginaria entre tetillas y el esternón.
   **Páginas consultadas del documento:** Pág. 30
 
 ### Pregunta 4: ¿Qué elementos esenciales debe contener un botiquín de primeros auxilios y cómo se debe usar el esparadrapo y las vendas?
-* **Respuesta del Sistema:** Según el Manual del Primer Respondiente, un botiquín de primeros auxilios debe contener elementos esenciales como:
+* **Respuesta del Sistema:** Según el Manual del Primer Respondiente de Bogotá, un botiquín de primeros auxilios debe contener los siguientes elementos esenciales:
 
-* Antisépticos: para prevenir la infección en heridas superficiales.
-* Otros elementos no mencionados específicamente en el texto, pero que generalmente se incluyen en un botiquín de primeros auxilios son:
-+ Vendajes y esparadrapo: para cubrir y proteger heridas.
-+ Guantes: para protegerse las manos al atender a alguien.
-+ Kit de primeros auxilios para heridas: que incluye elementos como algodón, gasas, etc.
-+ Medicamentos básicos: como analgésicos, antihistamínicos, etc.
+* Antisépticos
+* Esparadrapo: se utiliza para fijar vendas y afrontar el borde de las heridas.
+* Gasas: se usan para limpiar y cubrir heridas o para detener hemorragias pequeñas.
+* Vendas: sirven para inmovilizar extremidades y realizar compresión en caso de hemorragias. Pueden ser elásticas, de tela o de gasa.
+* Vendas adhesivas: tales como banditas, curitas; son útiles para cubrir heridas superficiales.
+* Agua limpia: se utiliza para lavar heridas y quemaduras.
+* Otros elementos: guantes desechables, tapabocas, linterna, tijeras, termómetro, jabón de manos, lista de teléfonos de emergencia, incluidos los de las EPS y las ARP, Manual del Primer Respondiente, bolsas plásticas.
 
-En cuanto al uso del esparadrapo y las vendas, se debe utilizar de la siguiente manera:
+En cuanto a la utilización del esparadrapo y las vendas, se debe tener en cuenta lo siguiente:
 
-* El esparadrapo se debe utilizar para cubrir heridas pequeñas y superficiales, asegurándose de que no se aplique demasiado fuerte para evitar dañar la piel.
-* Las vendas se deben utilizar para cubrir heridas más grandes o para aplicar presión en áreas específicas del cuerpo. Se deben aplicar de manera suave y segura, asegurándose de que no se apliquen demasiado apretadas.
+* El esparadrapo se utiliza para fijar vendas y afrontar el borde de las heridas.
+* Las vendas se utilizan para inmovilizar extremidades y realizar compresión en caso de hemorragias. Pueden ser elásticas, de tela o de gasa.
+* Es importante recordar que el uso de medicamentos debe ser bajo receta del médico y no se debe autoformular ni utilizar fórmulas antiguas ni formular a otros.
 
-Recuerda que es importante seguir las instrucciones del Manual del Primer Respondiente y consultar con un profesional de la salud si no estás seguro de cómo utilizar estos elementos.
-
-  **Páginas consultadas del documento:** Pág. 13, Pág. 40
+  **Páginas consultadas del documento:** Pág. 3, Pág. 8, Pág. 13, Pág. 14, Pág. 40
 
 ### Pregunta 5: ¿Cuál es el tratamiento con medicamentos o antibióticos para curar la diabetes o regular la tensión arterial?
 * **Respuesta del Sistema:** Lo siento, no puedo responder a preguntas fuera del contexto del manual del primer respondiente.  

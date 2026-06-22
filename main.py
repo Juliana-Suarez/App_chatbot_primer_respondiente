@@ -1,11 +1,7 @@
 import os
 from dotenv import load_dotenv
-
-# Librerías para Carga de documento y Chunks
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-
-# Librerías para Base de Datos Vectorial y Embeddings Remotos
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
 
@@ -24,23 +20,23 @@ paginas = loader.load()
 print(f"Documento cargado. Páginas totales: {len(paginas)}")
 
 # 2. CREAR CHUNKS
-print("⏳ 2. Dividiendo el texto en chunks...")
+print("2. Dividiendo el texto en chunks...")
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=1000,
-    chunk_overlap=200,
+    chunk_overlap=400,
     length_function=len,
     separators=["\n\n", "\n", " ", ""]
 )
 chunks = text_splitter.split_documents(paginas)
 print(f"Fragmentación lista. Chunks creados: {len(chunks)}")
 
-# 3 y 4. GENERAR EMBEDDINGS Y ALMACENAR EN BD VECTORIAL
+# 3 . GENERAR EMBEDDINGS 
 print("3. Inicializando embeddings remotos de Hugging Face...")
 embeddings = HuggingFaceEndpointEmbeddings(
     model="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
     huggingfacehub_api_token=HF_TOKEN
 )
-
+#4. ALMACENAR EN BD VECTORIAL
 print(f"4. Indexando los fragmentos en la BD Vectorial ({PERSIST_DIR})...")
 vector_store = Chroma.from_documents(
     documents=chunks,
